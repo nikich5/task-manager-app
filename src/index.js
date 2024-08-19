@@ -1,11 +1,11 @@
-async function getComponent() {
-  const element = document.createElement('div');
-  const { default: _ } = await import('lodash');
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Development mode!');
+}
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+function component() {
+  const element = document.createElement('pre');
+  element.innerHTML = ['Hello webpack!'];
   return element;
 }
 
-getComponent().then((component) => {
-  document.body.appendChild(component);
-});
+document.body.appendChild(component());
