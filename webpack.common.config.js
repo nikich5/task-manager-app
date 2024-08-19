@@ -27,7 +27,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Production',
+            title: 'Task Manager',
         }),
     ],
     output: {
