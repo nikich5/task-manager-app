@@ -13,11 +13,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/uuid": "^10.0.0",
     "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
     "sass": "^1.77.8",
     "sass-loader": "^16.0.0",
     "style-loader": "^4.0.0",
-    "html-webpack-plugin": "^5.6.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
     "webpack": "^5.93.0",
@@ -26,5 +27,6 @@
     "webpack-merge": "^6.0.1"
   },
   "dependencies": {
+    "uuid": "^10.0.0"
   }
 }
