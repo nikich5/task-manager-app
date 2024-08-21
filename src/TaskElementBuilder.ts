@@ -14,10 +14,6 @@ export class TaskElementBuilder {
         leftColumnDiv.className = 'card-left-column';
         taskItem.appendChild(leftColumnDiv);
 
-        const checkboxSpan: HTMLSpanElement = document.createElement('span');
-        checkboxSpan.textContent = 'Задача выполнена?';
-        leftColumnDiv.appendChild(checkboxSpan);
-
         const checkbox: HTMLInputElement = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.onchange = function (): void {
