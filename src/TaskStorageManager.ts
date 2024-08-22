@@ -2,22 +2,21 @@ import {Task} from "./models/Task";
 
 export class TaskStorageManager {
 
-    saveTaskList(taskList: Task[]): void {
-        // const convertedList: [string] = taskList.map((task: Task) => {
-        //     return JSON.stringify(task);
-        // });
-        const json = JSON.stringify(taskList);
-        localStorage.setItem('taskList', json);
-    }
+    private taskListStorageKey: string = 'taskListKey'
 
-    getTaskList(): Task[] {
-        const taskListValue: string = localStorage.getItem('taskList');
+    public get taskList(): Task[] {
+        const taskListValue: string = localStorage.getItem(this.taskListStorageKey);
         const parseResult = JSON.parse(taskListValue);
         if (parseResult) {
             return parseResult;
         } else {
             return [];
         }
+    }
+
+    public set taskList(taskList: Task[]) {
+        const json: string = JSON.stringify(taskList);
+        localStorage.setItem(this.taskListStorageKey, json);
     }
 
 }
