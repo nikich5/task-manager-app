@@ -7,7 +7,8 @@
     "start:prod": "webpack serve --open --config webpack.prod.config.js",
     "start:dev": "webpack serve --open --config webpack.dev.config.js",
     "build:prod": "webpack --config webpack.prod.config.js",
-    "build:dev": "webpack --config webpack.dev.config.js"
+    "build:dev": "webpack --config webpack.dev.config.js",
+    "postinstall": "echo 'Установка пакетов завершена!'"
   },
   "keywords": [],
   "author": "",

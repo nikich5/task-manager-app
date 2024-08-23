@@ -16,6 +16,7 @@ export class TaskElementBuilder {
 
         const checkbox: HTMLInputElement = document.createElement('input');
         checkbox.type = 'checkbox';
+        checkbox.checked = task.isComplete;
         checkbox.onchange = function (): void {
             onCheckboxChange(checkbox.checked)
         };
